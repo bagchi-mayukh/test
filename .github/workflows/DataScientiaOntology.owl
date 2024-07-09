@@ -6,7 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/mbagc/ontologies/2024/5/untitled-ontology-632"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mayukhbagchi/ontologies/2024/ds"/>
     
 
 
@@ -59,12 +59,72 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000076 -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000076">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:label xml:lang="en">ds:HasEdition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000100 -->
 
     <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000100">
         <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000033"/>
         <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000006"/>
         <rdfs:label xml:lang="en">ds:ConstituentDataSetOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000109 -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000109">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000039"/>
+        <rdfs:label xml:lang="en">ds:HasCourseProfessor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000115 -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000115">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000039"/>
+        <rdfs:label xml:lang="en">ds:HasTeachingAssistant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000128 -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000128">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000119"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000039"/>
+        <rdfs:label xml:lang="en">ds:HasLecturer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000144 -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000144">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000039"/>
+        <rdfs:label xml:lang="en">ds:HasProjectCoordinator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000148 -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000148">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000039"/>
+        <rdfs:label xml:lang="en">ds:HasProjectMember</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -744,6 +804,411 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000095 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000095">
+        <rdfs:label xml:lang="en">ds:CourseAttributes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000101 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000101">
+        <rdfs:label xml:lang="en">ds:CourseEditionAttributes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000102 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000102">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000103 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000103">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000104 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000104">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseSkills</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000105 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000105">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseAffiiatedUniversity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000106 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000106">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseMediumOfInstruction</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000110 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000110">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseFAQs</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000111 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000111">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000101"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseEditionInstructions</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000112 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000112">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000101"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseEditionNews</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000113 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000113">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000101"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseEditionModality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000116 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000116">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000101"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseEditionWeeklySchedule</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000117 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000117">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000101"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseEditionExam</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000118 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000118">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000101"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseEditionCollaborationOpportunities</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000120 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000120">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000121 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000121">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000101"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseEditionID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000122 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000122">
+        <rdfs:label xml:lang="en">ds:CourseEditionLectureAttributes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000123 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000123">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000122"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000119"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:LectureID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000124 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000124">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000122"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000119"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">ds:LectureDateTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000125 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000125">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000122"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000119"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">ds:LectureMaterial</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000126 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000126">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000122"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000119"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:ContentOfMaterial</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000129 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000129">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000122"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000119"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">ds:ExternalResources</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000130 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000130">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000122"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000119"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:PhaseDocumentationSubmission</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000131 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000131">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseTestimonials</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000132 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000132">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:CourseAffiliatedDegree</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000133 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000133">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000095"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000014"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">ds:CourseCredit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000134 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000134">
+        <rdfs:label xml:lang="en">ds:ProjectGeneralAttributes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000135 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000135">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:ProjectID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000136 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000136">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:ProjectTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000138 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000138">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">ds:ProjectStartDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000139 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000139">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">ds:ProjectExpectedEndDateOrEndDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000140 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000140">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:ProjectFundingAgency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000141 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000141">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:ProjectInput</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000142 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000142">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:ProjectOutput</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000143 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000143">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:label xml:lang="en">ds:ProjectStatus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000145 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000145">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:ProjectObservations</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000146 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000146">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ds:ProjectCitation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000147 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000147">
+        <rdfs:subPropertyOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000134"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label xml:lang="en">ds:ProjectExternalProfile</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -892,6 +1357,28 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ds:LSDataSet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000014 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000014">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000005"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">ds:Course</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000015 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000015">
+        <rdfs:label xml:lang="en">ds:CourseEdition</rdfs:label>
     </owl:Class>
     
 
@@ -1071,6 +1558,74 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">ds:LDDataSet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000119 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000119">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000005"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">ds:CourseEditionLecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000150 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000150">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000037"/>
+        <rdfs:label xml:lang="en">ds:LIProject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000151 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000151">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000037"/>
+        <rdfs:label xml:lang="en">ds:LKProject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000152 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000152">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000037"/>
+        <rdfs:label xml:lang="en">ds:LLProject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000154 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000154">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000037"/>
+        <rdfs:label xml:lang="en">ds:LMProject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000155 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000155">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000037"/>
+        <rdfs:label xml:lang="en">ds:LPProject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GO_6000156 -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#GO_6000156">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#GO_6000037"/>
+        <rdfs:label xml:lang="en">ds:LDProject</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
